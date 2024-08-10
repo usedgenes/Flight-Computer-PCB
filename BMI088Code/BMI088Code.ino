@@ -22,19 +22,16 @@
 
 #include "BMI088.h"
 
-/* accel object */
 SPIClass vspi = SPIClass(VSPI);
-
-Bmi088Accel *accel;
+/* accel object */
+Bmi088Accel accel(vspi,33);
 /* gyro object */
-Bmi088Gyro *gyro;
+Bmi088Gyro gyro(vspi,32);
 
 void setup() 
 {
-  vspi.begin(27, 25, 26, 33);
-  BMI Bmi088Accel(vspi,33);
-  gyro = Bmi088Gyro(vspi,32);
-  int status = 0;
+  vspi.begin(27,25,26, 33);
+  int status;
   /* USB Serial to print data */
   Serial.begin(115200);
   while(!Serial) {}
