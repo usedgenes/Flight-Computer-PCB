@@ -72,5 +72,5 @@ void loop()
   Serial.print(accel.getTemperature_C());
   Serial.print("\n");
   /* delay to help with printing */
-  delay(20);
+  delay(500);
 }
