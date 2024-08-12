@@ -81,7 +81,7 @@ class Bmi088Accel {
     bool mapDrdyInt2(bool enable);
     bool getDrdyStatus();
     void readSensor();
-    float getAccelX_mss();
+    float getAccelX_mss();     
     float getAccelY_mss();
     float getAccelZ_mss();
     float getTemperature_C();
