@@ -20,16 +20,20 @@
 
 SPIClass vspi = SPIClass(VSPI);
 // Instantiate an ICM42670P with SPI interface and CS on pin 8
-ICP201xx ICP(SPI,19);
+ICP201xx ICP(SPI, 19); 
 
 void setup() {
-  vspi.begin(5, 17, 16, 19);
+    Serial.println("beginning");
+  SPI.begin(5, 16, 17, 19);
   int ret;
   Serial.begin(115200);
-  while(!Serial) {}
+    Serial.println("beginning");
+
+  Serial.println("beginning");
 
   // Initializing the ICP201xx
   ret = ICP.begin();
+  Serial.println("beginning");
   if (ret != 0) {
     Serial.print("ICP201xx initialization failed: ");
     Serial.println(ret);
@@ -37,6 +41,8 @@ void setup() {
   }
 
   ICP.start();
+  Serial.println("beginning");
+
 }
 
 void loop() {
