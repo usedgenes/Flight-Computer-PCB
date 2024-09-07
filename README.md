@@ -1,5 +1,5 @@
 # Flight Computer PCB
-This is the fourth iteration of a flight computer designed to be used in a thrust vectoring rocket. The flight computer is a 4 layer PCB - Signal, Ground, Power, Signal, and it is programmed with a micro USB.  
+This is the fourth iteration of a flight computer designed to be used in a thrust vectoring rocket. The flight computer is a 4 layer PCB - Signal, Ground, Power, Signal, and it is programmed with a micro USB. There is test code in the "Arduino Test Code" folder to get started and run all the sensors and devices.
 
 Big thanks to PCBWay (https://www.pcbway.com/) for sponsoring this project - I couldn't have done this without their support! PCBWay has great customer service, the ordering process is very streamlined and intuitive, and they make sure to update you every step of your order, ensuring a worry-free experience. Their manufacturing is also very high quality, with countless customization options to suit your PCB needs. Best of all though, PCBWay is very involved with the PCB design community as they have contests with lots of cash prizes and also sponsor many projects such as my own. I'd heavily recommend using PCBWay the next time you need a PCB to get manufactured!
 
