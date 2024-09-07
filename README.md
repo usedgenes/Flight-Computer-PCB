@@ -1,6 +1,39 @@
-# Flight-Computer-PCB
-This is the third iteration of my flight computer to control a thrust vectoring rocket. Changes from V2 include a built in SD card reader instead of a module that is soldered on. I also changed the BMI270 IMU to a LSM6DSOXTR IMU because I wasn't able to get any of the libraries for the BMI270 to work. I also added a LIS3MLDTR magnetometer to further increase the flight computer's ability to estimate the rocket's attitude. The power routing has also improved, since the previous version had a flaw that caused the buck converter to overheat whenever the USB was attached to the ESP32. For the next iteration, I am planning to do away with the ESP devkit module and have a built in microcontroller, along with my own buck converter design.
+# Flight Computer PCB
+This is the fourth iteration of a flight computer designed to be used in a thrust vectoring rocket. The flight computer is a 4 layer PCB - Signal, Ground, Power, Signal, and it is programmed with a micro USB.  
+Big thanks to PCBWay for sponsoring this project - I couldn't have done this without their support! PCBWay has great customer service, the ordering process is very streamlined and intuitive, and they make sure to update you every step of your order, ensuring a worry-free experience. Their manufacturing is also very high quality, with countless customization options to suit your PCB needs. 
 
-The cost of the board + assembly is $55.56 without any coupons added
+Picture of the PCB:  
+<img src="https://github.com/usedgenes/Flight-Computer-PCB/blob/main/V4/PCB%20Picture.JPG" width=30% height=30%>
 
-I am just iteratively designing this flight computer, seeing what improvements I can add each time. Like before, looking at components' datasheets is helpful, along with reading electronics forums and other online resources. My routing has definitely gotten better, with designing becoming a lot more streamlined and efficient.
+Components List:
+* ESP32-WROOM
+* BMP388 Altimeter
+* SD Card Reader
+* LIS3MDLTR Magnetometer
+* BMI088 IMU
+* LSM6DSOXTR IMU
+
+User Interface:
+* Piezoelectric Buzzer
+* 2 Controllable LEDs
+* 4 Servo Outputs
+* 1 ESC Output
+
+Power Supply:
+* The flight computer is designed to use a 2S 7.4V Li-Po battery as the power supply
+* The raw battery powers the servos, while the sensors and ESP32 receive 3.3V from an AMS1117-3.3 that regulates the battery voltage
+* There is a red LED to signal if the board is on or not
+* There is also the option to use a voltage divider so the ESP32 is able to estimate the battery voltage
+
+Schematic:
+![](https://github.com/usedgenes/Flight-Computer-PCB/blob/main/V4/Schematic_Flight-Computer-V5_2024-09-07.png)
+
+PCB:  
+![](https://github.com/usedgenes/Flight-Computer-PCB/blob/main/V4/PCB_PCB_Flight-Computer-V5_2024-09-07.png)
+ 
+
+
+
+
+
+
