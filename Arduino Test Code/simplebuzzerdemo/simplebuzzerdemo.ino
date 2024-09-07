@@ -1,4 +1,4 @@
-const int buzzer = 12; //buzzer to arduino pin 9
+const int buzzer = 23; //buzzer to arduino pin 9
 int num = 0;
 void setup() {
   Serial.begin(115200);  
